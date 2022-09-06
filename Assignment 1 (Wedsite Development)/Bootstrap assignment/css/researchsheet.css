@@ -1,0 +1,139 @@
+
+
+/*--- Setting for whole container*/
+.research-container{
+	min-height: 50vh;
+	background-color: beige;
+	padding: auto;
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+
+.research-area-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+}
+
+/*--- Setting for 2 flex's*/
+.topics-container{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+/*--- Common setting for individual boxes */
+.topics_box1 .topics_box2 .topics_box3{
+    flex: 1;
+    font-weight: bold;
+    padding: 5px;
+    
+}
+/*--- Setting for boxes images */
+.topics_box1 .topics_box2 .topics_box3 img {
+	height: 120px;
+	width: 100px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border-radius: 20%;
+	border: 2px solid black;
+}
+
+
+.topics_box1{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.topics_box2{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.topics_box3{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+/*3D Flip Box: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_box*/
+.flip-box {
+	background-color: transparent;
+	width: 400px;
+	height: 350px;
+	perspective: 500px;
+}
+
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-box-front {
+	position: absolute;
+    text-align: center;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background-color:brown;
+	color: black;
+}
+
+.flip-box-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+    background-color:whitesmoke;
+    color:black;
+    transform: rotateY(180deg);	
+}
+
+.flip-box-front h5 {
+	text-align: center;
+	margin-top: 2px;
+}
+
+.flip-box-front img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+	border-radius: 50%;
+    justify-content: center;
+	width: 70%;
+	height: 50%;
+}
+
+.flip-box-back h5, .flip-box-back p .flip-box-back ul {
+	text-align: left;
+	line-height: 14px;
+  
+
+}
+.flip-box-back p{
+font-size: 15px;
+}
+
+.flip-box:hover .flip-box-inner {
+	transform: rotateY(180deg);
+}
+
+@media screen and (min-width: 768px) {
+    .topics-container{
+        display: flex;
+        flex-direction: row;
+    }
+}
+

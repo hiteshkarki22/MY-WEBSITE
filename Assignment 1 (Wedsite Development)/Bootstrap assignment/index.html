@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITWD6.408 ASSIGNMENT 1</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!---JAVASCRIPT CODE FROM BOOTSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="./css/mycss.css">
+</head>
+
+<!--Main Body start from here-->
+<body>
+    
+    <!--Navigation menu section-->	
+	<div class="CurtainMenu">
+	
+		<!--Icon and Tagline of the website-->
+		<div class="logo-tagline">
+			<div class="logo">
+				<img src="Image/global.png">  <!--image at the top left corner-->
+			</div>
+			<div class="tagline"><h2>ITWD6.408</h2>
+			</div>
+		</div>
+		
+		<!--Desktop horizontal-menu-->
+		<div class="desktop-menu">
+			<div class="horizontal-nav">
+				<ul>
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="forms.html">FORMS</a></li>
+					<li><a href="xml&json.html">XML/JSON</a></li>
+					<li><a href="Javascript.html">JAVASCRIPT</a></li>
+					<li><a href="research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</div>
+		
+		<!--Curtain Menu Icon-->
+		<p class="menu-icon-style" onclick="openNav()">≡</p>
+	</div>
+	
+	<!--when loading the page Hide the curtain menu as default -->
+	<nav id="curtain-nav">
+		<!--Adding a close button (X) hyperlink-->
+		<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+		<div class="curtain-nav-content">
+			<ul>
+				<li class="active"><a href="index.html">HOME</a></li>
+				<li><a href="forms.html">FORMS</a></li>
+				<li><a href="xml&json.html">XML/JSON</a></li>
+				<li><a href="Javascript.html">JAVASCRIPT</a></li>
+				<li><a href="research.html">RESEARCH</a></li>	
+			</ul>
+		</div>
+        </nav>
+       
+     <!---SHOWCASE SECTION---->
+         <div
+            class="bg-image p-5 text-center shadow-1-strong text-white "
+            style="background-image: url('https://cdn.wallpapersafari.com/5/18/A9TJul.jpg');"
+            >
+            <h2 class="mb-3 h2">Advanced Internet and Web Learning Portfollo</h2>
+            <h1 class="text-center">I am Hitesh Singh Karki</h1>
+            <h4>And I'm a Web Developer</h4>
+
+        </div>
+
+      <!---MY WEBSITE TECHNOLOGY & PERSONAL BIO---->
+      <div class="container-fluid">
+      <div class="row">
+            <div class="col-sm-12 bg-primary col-lg-6" style="min-height:20vh;">
+            <h4 class="text-center">Personal Bio</h4> 
+            <img height="100px" style="display: block; margin-left: auto; margin-right: auto" src="C:\Users\hites\Dropbox\My PC (DESKTOP-7BUT6L6)\Desktop\Assignment 1(wedsite Development)\Bootstrap assignment\Image/volleyball.jpg" alt="Volleyball" class="rounded-circle">
+            <p class="p-4">  Myself, Hitesh Singh Karki. I am 20 years old. I live in Havelock North with my Friends. I like to play volleyball and travel different places. 
+            </p>
+        </div>
+            <div class="col-sm-12 bg-danger col-lg-6" style="min-height:20vh;">
+                <h4 class="text-center">My Website Technology</h4>
+                <h5><U>TOP 5 WEBSITE I USE:-</U> </h5>
+                <ul class="listed-unstyled">
+                    <li><i>Web Hosting:</i> I prefer, web hosting by Spark.</li>
+                    <li><i>Web Design:</i> I would prefer, django as my web designer platform.</li>
+                    <li><i>Database:</i> I would prefer Postgres SQL as my database </li>
+                    <li><i>Code Editor:</i> I prefer Visual Studio Code as my code editor</li>
+                    <li><i>Web Framework:</i> I am using Bootstrap as my framework</li>
+                </ul>
+             </div>
+        </div>
+    </div>
+    </div>
+
+       <!---MY WEBSITE DEVELOPMENT---->
+      <div class="competences">
+          <h4>My Website Development competences</h4>
+          <div class="flip-box-area">
+              <div class="flip-box-header">
+                  <h5>Hover over the box to flip it over</h5></div>
+                  <div class="topics-container">
+                      <div class="topics_box">
+
+                        <!---Creating first flip box---->
+                        <div class="flip-box">
+                            <div class="flip-box-inner">
+                                <!---Front side of the flipbox-->
+                                <div class="flip-box-front">
+                                    <h5>Hypertext Mark-up Language</h5>
+                                    <img src="./Image/html5.png" alt="html image">
+                                </div>
+                                <!---other-side of the flipbox---->
+                                <div class="flip-box-back">
+                                    <h5>HTML</h5>
+                                    <p>	HTML (Hyper-Text Markup Language) is used to put the <span class="red-color">structure & content </span> of a website together (Like a skeleton of a body).<br>
+										It is the fifth and current major version of the HTML standard, and subsumes XHTML.
+									</p>
+									<p> Read more <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML: HyperText Markup Language</a>
+									</p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="topics_box">
+                      <!---Creating second flipbox----->
+                      <div class="flip-box">
+                          <div class="flip-box-inner">
+                              <!---front side of the flipbox-->
+                              <div class="flip-box-front">	
+                                <h5>Cascading Style Sheet</h5>
+                                <img src="./Image/css3.png" alt="css3 image">										
+                            </div>
+                            <!----back side of the  flipbox-->
+                            <div class="flip-box-back">		
+                                <h5>CSS3</h5>
+                                <p>CSS3 is the latest evolution of the Cascading Style Sheets language <br>
+                                    CSS acts like <span class="red-color">makeup for the HTML</span>. CSS improves the colors and layout of a website structure built with HTML.
+                                </p>
+                                <p> Read more <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Tutorials">CSS Tutorials</a>
+                                </p>	
+                            </div>
+                        </div>
+                          </div>
+                      </div>
+
+                      <!---Creating third flipbox-->
+                      <div class="topics_box">
+                      <div class="flip-box">
+                          <div class="flip-box-inner">
+                              <!---front side of the flipbox-->
+                              <div class="flip-box-front">	
+                                <h5>Javascript</h5>
+                                <img src="./Image/javascript.png" alt="css3 image">										
+                            </div>
+                            <!---back side of the flipbox-->
+                            <div class="flip-box-back">		
+                                <h5>JavaScript</h5>
+                                <p>JavaScript is a high-level, interpreted scripting programming language. <br>
+                                    JavaScript is a full-on programming language that adds <span class="red-color">interactivity and functionality to a website</span>.
+                                </p>
+                                <p class="skill-text"> Read more <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript ">JavaScript</a>
+                                </p>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+        <!-----STATEMENT OF AUTHENTICITY-->
+        <section>
+            <div class="bg-warning border border-dark" style="min-height:15vh;">
+                <h4 class="text-center">Statement of Authenticity</h4>
+            <p class="text-center">" I confirm that
+            this is an original assessement and its entirely my own work. <br>
+            It contains no material previously published or written by another person or myself
+             except wheredue acknowledgement is made in the text. <br>
+             No material which to a substantial extent has been submitted for any other academic course, is included without acknowledgement."
+        </p>
+            </div>
+        </section>
+        <!---FOOTER----->   
+        <footer>
+            <div class="text-center bg-info"> @Created by: Hitesh Karki<br />
+                Contact me at: <a href="mailto:hitesh.karki@eit.ac.nz">hitesh.karki@eit.ac.nz</a>
+            </div>
+        </footer>
+
+            <!---javascript file at the bottom of the html file-->
+            <script type="text/javascript" src="./JS/myjavascript.js">
+            </script>
+    </body>
+</html>

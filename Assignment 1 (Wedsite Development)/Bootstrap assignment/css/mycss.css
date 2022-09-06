@@ -1,0 +1,308 @@
+/*----Mobile first approach---*/
+
+nav {
+	padding: 10px 10px 10px 10px;
+	overflow: visible;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px 16px;
+	text-decoration: honeydew;	
+}
+
+.active {
+	background-color: #8bff33;
+}
+
+nav ul li:hover:not(.active) {
+	background-color: rgb(4, 0, 128);
+}
+
+
+nav ul li ul li {
+	background: rgb(85, 85, 85); 
+	display: block; 
+	font-size: 1em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+
+/*Use Flexbox to create responsive layout*/
+.CurtainMenu {
+	background-color:#ffe6f0;
+	min-height: 5vh;
+	
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;
+}
+
+.logo-tagline {
+	/*Use Flexbox to create responsive layout*/
+	flex: 1;
+	
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;/*display on a row => horizontally*/
+}
+
+.logo, .tagline {
+	font-size: 24px;
+}
+
+.tagline{
+	/*Centering both vertical and horizontal*/
+	display: flex;
+
+	justify-content: space-around;
+	margin-top: 10px;
+	
+}
+
+.desktop-menu {
+	/*Use Flexbox to create responsive layout*/
+	flex: 3;
+	display: none;	
+}
+
+
+.menu-icon-style {
+	/*Use Flexbox to create responsive layout*/
+	flex: 1;
+		
+	font-size: 2.8em;
+	color:black;
+	cursor: pointer;
+	text-align: right;
+	margin-right: 20px;
+	
+}
+
+#curtain-nav {
+	height: 70%;/*100%*/
+	width: 0;/*Hide it as default when loading page*/
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+	
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
+
+.curtain-nav-content {
+	/*For curtain menu*/
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;	
+	overflow: visible;
+}
+
+.nav-close-button {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 2.0em;
+	color: white;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*For Competences*/
+.competences{
+	min-height: 20vh;
+	background-color: beige;
+	padding: auto;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+
+.competences h4{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.topics-container{
+	display: flex;
+	flex-direction: column; /*display on a column on the phone first*/
+	padding: 15px;
+} 
+
+.topics_box{
+	flex: 1;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+	min-height: 300px;
+
+}
+
+.topics_box img {
+	height: 120px;
+	width: auto;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border-radius: 20%;
+	border: 2px solid black;
+}
+
+/*flip boxes styles*/
+.flip-box-area {
+	padding: 5px;
+	margin-top: 5px;
+	margin-left: 100px;
+}
+
+.flip-box-header {
+	padding: 10px;
+	text-align: center;
+	font-size: 25px;
+	background-color: aquamarine;
+}
+
+.flip-box-header h5 {
+	text-align: center;
+	margin-right:75px ;
+}
+
+/*3D Flip Box: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_box*/
+.flip-box {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	perspective: 500px;
+}
+
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-box-front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background-color: rgb(45, 0, 128);
+	color: black;
+}
+
+.flip-box-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+    background-color: rgb(134, 180, 9);
+    color: blue;
+    transform: rotateY(180deg);	
+}
+
+.flip-box-front h3 {
+	text-align: center;
+	margin-top: 5px;
+}
+
+.flip-box-front img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+	border-radius: 50%;
+	width: auto;
+	height: 80%;
+}
+
+.flip-box-back h3, .flip-box-back p {
+	text-align: left;
+	line-height: 20px;
+}
+
+.flip-box:hover .flip-box-inner {
+	transform: rotateY(180deg);
+}
+
+
+
+/*for the larger screen more than 768px*/
+@media screen and (min-width: 768px){
+	.topics-container{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.desktop-menu {
+		display: block;
+	}
+	
+	/*Horizontal nav*/
+	.horizontal-nav {
+			background-color: #e6ffe6; 
+		 padding: 10px 10px 10px 10px;
+	}
+	
+	.horizontal-nav ul {
+		 list-style-type:none;
+		 margin: 0;
+		 padding: 0;
+		 overflow: hidden;
+		text-align: center;
+	 }
+ 
+	 .horizontal-nav ul li {
+		 display: inline-block;
+		 font-family: 'Oswald', sans-serif;
+		 font-size: 18px;
+	 }
+ 
+	 .horizontal-nav ul li a {
+		 display: block;
+		 color: black;
+		 text-align: center;
+		 padding: 14px 10px;
+		 text-decoration: none;	
+	 }
+ 
+ 
+	 .horizontal-nav ul li:hover:not(.active) {
+		 background-color: rgb(7, 94, 7);
+	 }
+}

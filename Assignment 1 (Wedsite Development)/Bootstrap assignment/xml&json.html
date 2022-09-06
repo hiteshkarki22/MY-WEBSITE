@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML&JASON</title>
+    <!---Css and Javascript link from Bootstrap-->
+    
+<link rel="stylesheet" type="text/css" href="./css/json.css">
+</head>
+<body>
+
+<!--Main content section-->
+<main>
+    <!--Internal menu: contain 4 buttons-->
+    <section class="internal-menu-area">	
+        <div class="internal-menu-row">
+            <div class="internal-menu-row-box">
+                <button class="demo-button" onclick="showDemo(0)">Xml Rules</button>
+            </div>
+            <div class="internal-menu-row-box">
+                <button class="demo-button" onclick="showDemo(1)">Json Rules</button>
+            </div>
+        </div>
+        
+        <div class="internal-menu-row">
+            <div class="internal-menu-row-box">
+                <button class="demo-button" onclick="showDemo(2)">RSS</button>
+            </div>
+            <div class="internal-menu-row-box">
+                <button class="demo-button" onclick="showDemo(3)">Json File</button>
+            </div>
+        </div>
+    </section>
+ <!--Demo area: contain 4 boxes for 4 demos-->
+    <section class="demo-area">
+        <article class="demo-box"> 
+            <div id="xml1">
+               
+                <ul class="rules-with-examples">
+                    <h3><u>XML Rules </u></h3>
+                    <br>
+                    <h4><b>Tags & Elements</b></h4>
+                    <li><i>Enclosed in a traingular brackets</i> Example:&lt;contact&gt;------&lt;/contact&gt;</li>
+                    <li><i>Must have closing tag.</i> Example:&lt;/contact&gt;</li>
+                    <li><i>Must have a ROOT element.</i> Example:&lt;contact&gt;------&lt;/contact&gt; 
+                        Whatever contains the entire code of blocks</li>
+                    <li><i>Case sensitive</i> Example:&lt;contact&gt;------&lt;/contact&gt; This is a right way.</li>
+                    <h4><b>Attributes</b></h4>
+                    <li><i>User a name/value pair</i>category="work"</li>
+                    <li><i>single value.</i> Example:&lt;company&gt; EIT &lt;/company&gt; It can take single value per attribute.</li>
+                    <li><i>Value must be put in quote marks.</i> Example:&lt;address&gt; category="work" &lt;/address&gt;</li>
+                    <h4><b>Text</b></h4>
+                    <li><i>Case-sensitive.</i> Example:&lt;address&gt; 501 glucester street &lt;/address&gt; 
+                        This will be wrong as 'g' of the glucester needs to be uppercase.</li>
+                    <li><i>New line(line break)</i></li>
+                    <li><i>Special characters.</i> Example:& is &amp </li>
+                    <li><i>Comments are like HTML comment.</i> Example:&lt;!-----&gt;</li>This is the way to do comments.
+                </ul>
+            </div>
+        </article>
+        
+        <article class="demo-box"> 
+            <div id="json1">
+                <ul class="rules-with-examples">
+                    <h3><u>Json Rules</u></h3>
+                    <br>
+                    <li><i>Data is in "name" :"value" pairs. </i> Example: "name": "John Smith" </li>
+                    <li><i>Data is separated by commas(,).</i> Example: "address": ["EIT", "501 Glouceste", "Napier"] </li>
+                    <li><i>Curly {} braces hold objects. </i> Example:{ "name": "John Smith"} </li>
+                    <li><i>Square [] brackets hold arrays. </i> Example: [{"name": "John Smith"}] </li>
+
+
+                </ul>
+            </div>
+        </article>
+
+        <article class="demo-box"> 
+            <div id="rss1">
+                <section><h1>USE XMLHttpRequeest object to load XML files from server</h1>
+                    <button onclick="loadXML()">Load XML File</button>
+                    <p id="channel"></p>
+                    <script>
+                                function loadXML(){
+                                    // create a request and send it to server.
+                                    //use an CORS API website as a proxy to ask permission to get files.
+                                    let proxy = "https://cors-anywhere.herokuapp.com/";
+                                    // where the xml file is stored on server.
+                                    let url="https://www.smashingmagazine.com/feed/";
+                    
+                                    //Use  XMLHttprequest object to send request
+                                    let xhttp = new XMLHttpRequest();
+                                    xhttp.open("GET", proxy+url, true); // true: asynchronous  communication, false: synchronous.
+                                    xhttp.send(); // SEnd this request from browser to the url server
+                    
+                                    // Wait the response from server and then process it
+                                        xhttp.onreadystatechange = function(){
+                                            // check the response first line to see the response status bar
+                                            if(this.readyState == 4 && this.status == 200){
+                                                // everything is going well and the xml file is sent background.
+                                                let receivedXMLFile=this.responseText;
+                                                //display this xml file on my page at "contacts" p
+                                                document.getElementById("channel").innerHTML=receivedXMLFile;
+                                            }
+                                        };
+                                }
+                    </script>
+                    </section>
+                
+            </div>
+        </article>
+
+        <article class="demo-box">
+            <div id="jsonfile1">
+                <!----jsonxhr request-->
+                <section><h1>USE XMLHttpRequest object to load Json file from github</h1>
+                    <button onclick="loadXML()">Load XML File</button>
+                    <p id="status"></p>
+                    <script>
+                                function loadXML(){
+                                    // create a request and send it to server.
+                                    //use an CORS API website as a proxy to ask permission to get files.
+                                    let proxy = "https://cors-anywhere.herokuapp.com/";
+                                    // where the xml file is stored on server.
+                                    let url="https://github.com/bohemia2008/bohemia2008/blob/main/data.json";
+                    
+                                    //Use  XMLHttprequest object to send request
+                                   const xhr = new XMLHttpRequest();
+                                    xhr.open("GET", proxy+url, true); // true: asynchronous  communication, false: synchronous.
+                                    xhr.send(); // SEnd this request from browser to the url server
+                    
+                                    // Wait the response from server and then process it
+                                        xhr.onload = function(){
+                                            // check the response first line to see the response status bar
+                                            if(this.status === 200){
+                                                try{
+                                                    const resObj=JSON.parse(this.responseText);
+                                                    console.log(resObj);
+                                                } catch(e){
+                                                    console.warn('There was an error in the Json, cannot parse')
+                                                } 
+
+                                                }else {console.warn('Did not recieve 200 OK from response')
+                                               
+                                            }
+                                        };
+                                }
+                    </script>
+                    </section>
+            </div>
+        </article>
+        
+    </section>
+     
+</main>
+
+<script type="text/javascript" src="JS/json.js" >
+showDemo(0);
+</script>
+        <!---FOOTER----->   
+        <footer>
+            <div class="text-center bg-info"> @Created by: Hitesh Karki<br />
+                Contact me at: <a href="mailto:hitesh.karki@eit.ac.nz">hitesh.karki@eit.ac.nz</a>
+            </div>
+        </footer>
+</body>
+</html>

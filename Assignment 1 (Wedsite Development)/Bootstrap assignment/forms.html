@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOGLE/HTML FORMS</title>
+    <!---Css and Javascript link from Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="">
+
+</head>
+<body>
+	<h1 class="bg-success text-center p-3">NAVIGATION BAR HERE</h1>
+
+		<div class="row">
+			<!--Button section-->
+			<div class="col-12 col-md-2">
+				<div class="container-fluid">
+					<div class="row justify-content-around">
+						<!--Button 1-->						
+						<button class="col-6 col-md-12 btn btn-primary bg-warning" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button1" 
+								aria-expanded="false" aria-controls="button1">HTML FORM</button>
+						<!--Button 1-->
+						<button class="col-6 col-md-12 btn btn-primary" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button2" 
+								aria-expanded="false" aria-controls="button2">GOOGLE FORM</button>	 					
+					</div>			
+				</div>			
+			</div>
+			
+			<!--Main content section-->
+			<div class="col-12 col-md-10">
+				<div class="row">
+				  <div class="col-12">
+					<!--Content area 1 for button 1-->
+					<div class="collapse show multi-collapse" id="button1">
+					  <div class="card card-body">HTML FORM HERE<br>
+					
+						<form name="techform" action="https://danieldangs.com/itwd6408/handle_survey.php"
+								method="post" enctype="text/plain">
+							
+							<div class="row mb-3">
+							  <label for="fname" class="col-sm-2 col-form-label">First Name</label>
+							  <div class="col-sm-10">
+								<input type="text" class="form-control" id="fname" name="First Name" required>
+							  </div>
+							</div>
+
+							<div class="row mb-3">
+							  <label for="lname" class="col-sm-2 col-form-label">Last Name</label>
+							  <div class="col-sm-10">
+								<input type="text" class="form-control" id="lname" name="Last Name" required>
+							  </div>
+							</div>
+
+							<div class="row mb-3">
+								<label for="Address" class="col-sm-2 col-form-label">Address</label>
+								<div class="col-sm-10">
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<label for="Line1" class="col-sm-2 col-form-label">Line 1</label>
+								<div class="col-sm-10">
+								  <input type="text" class="form-control" id="line1" name="Line 1" required>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<label for="Line2" class="col-sm-2 col-form-label">Line 2</label>
+								<div class="col-sm-10">
+								  <input type="text" class="form-control" id="line2" name="Line 1">
+								</div>
+							</div>
+							
+							<div class="row mb-3">
+								<label for="Town/City" class="col-sm-2 col-form-label">Town/City</label>
+								<div class="col-sm-10">
+								  <input type="text" class="form-control" id="Town/City" name="Town/City" required>
+								</div>
+							</div>
+
+							<fieldset class="row mb-3">
+							  <legend class="col-form-label col-sm-2 pt-0">Gender</legend required>
+							  <div class="col-sm-10">
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+								  <label class="form-check-label" for="gridRadios1">
+									Male
+								  </label>
+								</div>
+								<div class="form-check">
+								  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+								  <label class="form-check-label" for="gridRadios2">
+									Female
+								  </label>
+								</div>
+								<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+								<label class="form-check-label" for="gridRadios2">
+								  Other
+								</label>
+							  </div>
+							  </fieldset>
+
+
+
+							  <fieldset class="row mb-3">
+								<legend class="col-form-label col-sm-2 pt-0">Mobile Phone Type</legend required>
+								<div class="col-sm-10">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+										<label class="form-check-label" for="inlineCheckbox1">Android</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+										<label class="form-check-label" for="inlineCheckbox2">IOS</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+										<label class="form-check-label" for="inlineCheckbox3">Windows</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+										<label class="form-check-label" for="inlineCheckbox3">Other</label>
+									</div>
+								</div>
+								</fieldset>
+
+
+							  <fieldset class="row mb-3">
+								<legend class="col-form-label col-sm-2 pt-0">Network Provider</legend required>
+								<div class="col-sm-10">
+									<select class="form-select" aria-label="Default select example">
+										<option value=""> </option>
+										<option value="1">Vodafone</option>
+										<option value="2">Spark</option>
+										<option value="3">2 Degrees</option>
+										<option value="4">Skinny</option>
+										<option value="5">Others</option>
+									</select>									
+								</div>
+							  </fieldset>
+
+							  <fieldset class="row mb-3">
+								<legend class="col-form-label col-sm-2 pt-0">Do you use your phone for study?</legend>
+								<div class="col-sm-10">
+									<Input type="paragraph" rows="5"></Input>
+								</div>
+								</fieldset>
+
+
+
+							<button type="submit" class="btn btn-primary">Sign in</button>
+						  </form>
+					  </div>
+					</div>
+				  </div>
+				  
+				  <!--Content area for button 2-->
+				  <div class="col-12">
+					<div class="collapse multi-collapse" id="button2">
+					  <div class="card card-body">GOOGLE FORM HERE<br>
+						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOgGE3anl9M6bIhKXcAZAV689jGvibL3qNdMKwzUKGXgab-w/viewform?embedded=true" width="640" height="2128" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+					  </div>
+					</div>
+				  </div>
+				</div>				
+			</div>		
+		</div>
+	</div>
+		
+	        <!---FOOTER----->   
+          <footer>
+            <div class="text-center bg-info"> @Created by: Hitesh Karki<br />
+                Contact me at: <a href="mailto:hitesh.karki@eit.ac.nz">hitesh.karki@eit.ac.nz</a>
+            </div>
+        </footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>	
+
+</body>
+
+</html>
